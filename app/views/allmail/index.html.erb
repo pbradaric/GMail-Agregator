@@ -1,0 +1,27 @@
+<h1 style="font: 150% sans-serif;">Mail for <%=h flash[:username] %></h1>
+<p>
+<p style="font: 90% sans-serif;">
+Total messages: <%=h @mail_count["MESSAGES"] %><br>
+Unread messages: <%=h @mail_count["UNSEEN"] %><br>
+Recent messages: <%=h @mail_count["RECENT"] %><br>
+</p>
+<table cellspacing="1" cellpadding="1" align="center" width="94%">
+  <tbody>
+    <% if @current_inbox %>
+      <% for header in @current_inbox %>
+        <tr>
+          <td width="75%" valign="top" style="font: 80% sans-serif;">
+            <%=h header %><br>
+          </td>
+          <td valign="top">
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%=h @current_inbox.length %>
+<%=h @test1 %>
+</p>
